@@ -1,0 +1,26 @@
+.about {
+  margin-top: 80px;
+  background-image: url(../img/colorfull.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 600px;
+
+  @include overSp {
+    margin-top: 0;
+  }
+
+  .about-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .title {
+    display: flex;
+    justify-content: center;
+  }
+
+  p.desc {
+    text-align: center;
+  }
+}

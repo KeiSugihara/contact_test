@@ -1,0 +1,74 @@
+.news {
+  padding-top: 80px;
+  .inner {
+    @include overTab {
+      display: flex;
+      justify-content: center;
+      margin-right: 40px;
+      margin-left: 40px;
+
+      .sub {
+        text-align: left;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .news-cont {
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+
+  .news-list {
+    .row {
+      // 日付・カテゴリ・テキスト上下中央
+      display: flex;
+      align-items: center;
+      + .row {
+        margin-top: 16px;
+      }
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    dd.category {
+      font-weight: bold;
+      border-radius: 20px;
+      color: #333333;
+      font-size: 14px;
+      background-color: #e8e8e8;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 24px;
+      margin-left: 24px;
+      width: 100px;
+    }
+
+    dd.news-desc {
+      flex: 1;
+      a {
+        width: 40px;
+        font-size: 14px;
+        @include overTab {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  .news-link {
+    color: #000;
+    padding-top: 40px;
+
+    @include overTab {
+      padding-top: 50px;
+    }
+    a {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

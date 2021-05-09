@@ -1,0 +1,50 @@
+.works {
+  margin-top: 160px;
+  margin-right: 80px;
+  margin-left: 80px;
+  padding-bottom: 160px;
+  background-color: #f0f0f0;
+
+  @include overSp {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .works-link {
+    padding-top: 56px;
+    a {
+      width: 200px;
+      color: white;
+      background: linear-gradient(-135deg, #7331a1, #250c65);
+    }
+  }
+
+  p.desc {
+    text-align: center;
+  }
+
+  .works-item {
+    width: 80%;
+    display: flex;
+    // コンテンツ中央配置
+    @include overSp {
+      display: block;
+    }
+    .image {
+      .text {
+        padding-left: 32px;
+        padding-right: 32px;
+        // coomonの設定を打ち消す
+        padding-top: 0;
+      }
+
+      .sub {
+        padding-left: 58px;
+      }
+      p.desc {
+        flex: 1;
+        // margin-right: 32px;
+      }
+    }
+  }
+}

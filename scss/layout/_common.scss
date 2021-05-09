@@ -1,0 +1,99 @@
+main {
+  @include overTab {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.cmn-section {
+  padding-top: 120px;
+  @include overSp {
+    padding-top: 80px;
+  }
+}
+
+.cmn-title {
+  @include TimesNewRoman;
+  color: #391e88;
+  letter-spacing: 3px;
+  // コンテンツとの境目
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+  padding-bottom: 40px;
+  @include overSp {
+    padding-bottom: 32px;
+  }
+
+  .main {
+    text-transform: uppercase;
+  }
+
+  .sub {
+    display: block;
+    font-size: 14px;
+    margin-top: 16px;
+
+    &.-faq {
+      text-transform: uppercase;
+    }
+  }
+}
+
+.cmn-link {
+  padding-top: 120px;
+  // ボタンを中央配置 aタグにかけない！
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include overSp {
+    padding-top: 56px;
+  }
+
+  a {
+    position: absolute;
+    font-family: "Montserrat";
+    font-weight: bold;
+    // color: cl(white);
+    // background-color: cl(gold);
+    width: 200px;
+    height: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+    border-radius: 40px;
+    letter-spacing: 2px;
+    padding: 12px;
+
+    &:after {
+      position: absolute;
+      // アイコンの位置
+      top: 22px;
+      right: 16px;
+      content: "";
+      width: 12px;
+      height: 12px;
+      background: url("../img/arrow.png") no-repeat;
+      background-size: contain;
+    }
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
+
+.title {
+  font-weight: bold;
+  padding-bottom: 16px;
+  font-size: 20px;
+}
+
+.desc {
+  line-height: 2;
+  font-size: 16px;
+}
+
+.text {
+  padding-top: 32px;
+}

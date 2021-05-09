@@ -1,0 +1,34 @@
+.footer {
+  background-color: black;
+  padding-top: 60px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+
+  a {
+    @include TimesNewRoman;
+    color: white;
+    font-size: 14px;
+  }
+  .copy-right {
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    padding-top: 32px;
+    color: #6e6e6e;
+  }
+  .nav-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .nav-list {
+      display: flex;
+
+      .nav-item {
+        + .nav-item {
+          margin-left: 32px;
+        }
+      }
+    }
+  }
+}

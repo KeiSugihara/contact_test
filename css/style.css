@@ -1,0 +1,561 @@
+@charset "UTF-8";
+@media print, screen and (min-width: 768px) {
+  ._sp {
+    display: none;
+  }
+}
+
+._pc {
+  display: none;
+}
+@media print, screen and (min-width: 768px) {
+  ._pc {
+    display: block;
+  }
+}
+
+/* 共通 */
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: "ヒラギノ角ゴ ProN", sans-serif;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  -webkit-padding-start: 0px;
+          padding-inline-start: 0px;
+}
+
+@media print, screen and (min-width: 768px) {
+  main {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.cmn-section {
+  padding-top: 120px;
+}
+@media print, screen and (max-width: 896px) {
+  .cmn-section {
+    padding-top: 80px;
+  }
+}
+
+.cmn-title {
+  font-family: "Montserrat", "Arial", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Meiryo", sans-serif;
+  color: #391e88;
+  letter-spacing: 3px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+  padding-bottom: 40px;
+}
+@media print, screen and (max-width: 896px) {
+  .cmn-title {
+    padding-bottom: 32px;
+  }
+}
+.cmn-title .main {
+  text-transform: uppercase;
+}
+.cmn-title .sub {
+  display: block;
+  font-size: 14px;
+  margin-top: 16px;
+}
+.cmn-title .sub.-faq {
+  text-transform: uppercase;
+}
+
+.cmn-link {
+  padding-top: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media print, screen and (max-width: 896px) {
+  .cmn-link {
+    padding-top: 56px;
+  }
+}
+.cmn-link a {
+  position: absolute;
+  font-family: "Montserrat";
+  font-weight: bold;
+  width: 200px;
+  height: 37px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease;
+  border-radius: 40px;
+  letter-spacing: 2px;
+  padding: 12px;
+}
+.cmn-link a:after {
+  position: absolute;
+  top: 22px;
+  right: 16px;
+  content: "";
+  width: 12px;
+  height: 12px;
+  background: url("../img/arrow.png") no-repeat;
+  background-size: contain;
+}
+.cmn-link a:hover {
+  opacity: 0.5;
+}
+
+.title {
+  font-weight: bold;
+  padding-bottom: 16px;
+  font-size: 20px;
+}
+
+.desc {
+  line-height: 2;
+  font-size: 16px;
+}
+
+.text {
+  padding-top: 32px;
+}
+
+.header {
+  z-index: 2;
+  background: linear-gradient(-90deg, #2a0048, black);
+  /* 3種の神器でセンター合わせ */
+  align-items: center;
+  justify-content: space-between;
+  /* 追従 トップ画像をマージントップで下げる */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+@media print, screen and (min-width: 768px) {
+  .header {
+    display: flex;
+  }
+}
+.header .header-logo {
+  margin-left: auto;
+  margin-right: auto;
+}
+.header .header-logo img {
+  width: 100px;
+}
+@media print, screen and (min-width: 768px) {
+  .header .header-logo img {
+    width: 160px;
+    margin-left: 32px;
+  }
+}
+.header .nav-list {
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+}
+@media print, screen and (min-width: 768px) {
+  .header .nav-list {
+    margin-right: 24px;
+  }
+}
+.header .nav-list .nav-item a {
+  letter-spacing: 2px;
+  color: white;
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  font-weight: bold;
+  display: block;
+  text-align: center;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+@media print, screen and (min-width: 768px) {
+  .header .nav-list .nav-item a {
+    font-size: 16px;
+  }
+  .header .nav-list .nav-item a::after {
+    position: absolute;
+    bottom: -4px;
+    left: 10px;
+    content: "";
+    width: 80%;
+    height: 1px;
+    background: white;
+    transform: scale(0, 1);
+    transform-origin: right top;
+    transition: transform 0.3s;
+  }
+  .header .nav-list .nav-item a:hover::after {
+    transform-origin: left top;
+    transform: scale(1, 1);
+  }
+}
+
+.footer {
+  background-color: black;
+  padding-top: 60px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+}
+.footer a {
+  font-family: "Montserrat", "Arial", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Meiryo", sans-serif;
+  color: white;
+  font-size: 14px;
+}
+.footer .copy-right {
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  padding-top: 32px;
+  color: #6e6e6e;
+}
+.footer .nav-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer .nav-wrap .nav-list {
+  display: flex;
+}
+.footer .nav-wrap .nav-list .nav-item + .nav-item {
+  margin-left: 32px;
+}
+
+.top {
+  background-image: url(../img/hero.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 800px;
+  width: 100%;
+}
+@media print, screen and (min-width: 768px) {
+  .top {
+    background-image: url(../img/hero.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 800px;
+    width: 100%;
+  }
+}
+.top .top-title {
+  font-family: "Montserrat", "Arial", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Meiryo", sans-serif;
+  color: white;
+  display: block;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  text-align: center;
+  font-size: 56px;
+  width: 100%;
+  font-weight: bolder;
+  line-height: 80px;
+}
+@media print, screen and (min-width: 768px) {
+  .top .top-title {
+    color: white;
+    display: block;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    text-align: center;
+    font-size: 56px;
+    width: 100%;
+    font-weight: bolder;
+  }
+  .top .top-title br {
+    display: none;
+  }
+}
+.top .top-desc {
+  color: white;
+  display: block;
+  position: absolute;
+  top: 28%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  text-align: center;
+  font-size: 18px;
+  width: 100%;
+}
+@media print, screen and (min-width: 768px) {
+  .top .top-desc {
+    position: absolute;
+    top: 32%;
+    left: 50%;
+    font-size: 24px;
+  }
+}
+.top .top-link a {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  color: white;
+  border: 1px solid white;
+}
+@media print, screen and (min-width: 768px) {
+  .top .top-link a {
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+  }
+  .top .top-link a:hover {
+    opacity: 0.5;
+  }
+}
+
+@media print, screen and (max-width: 896px) {
+  .service .inner {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.service-item {
+  width: 100%;
+  text-align: center;
+}
+@media print, screen and (max-width: 896px) {
+  .service-item {
+    margin-top: 40px;
+  }
+}
+.service-item .title {
+  display: flex;
+  justify-content: center;
+}
+.service-item img {
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+}
+.service-item .text {
+  text-align: left;
+}
+@media print, screen and (min-width: 768px) {
+  .service-item img {
+    flex: 1;
+  }
+}
+
+.service-link a {
+  color: white;
+  background: linear-gradient(-135deg, #7331a1, #250c65);
+}
+
+@media print, screen and (min-width: 768px) {
+  .service-list {
+    display: flex;
+  }
+
+  .service-item {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+.course {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.course-list {
+  padding-left: 0;
+}
+.course-list .text {
+  text-align: center;
+}
+@media print, screen and (min-width: 768px) {
+  .course-list {
+    display: flex;
+  }
+  .course-list .text {
+    text-align: center;
+  }
+}
+
+@media print, screen and (min-width: 768px) {
+  .course-item + .course-item {
+    margin-left: 32px;
+  }
+}
+
+.contact {
+  background: linear-gradient(to bottom right, #dddddf, #f0f0f0);
+  padding-bottom: 100px;
+  height: 300px;
+}
+.contact .inner {
+  text-align: center;
+}
+.contact .cmn-title {
+  padding-bottom: 0;
+}
+.contact a {
+  color: white;
+  background: linear-gradient(-135deg, #7331a1, #250c65);
+}
+.contact .inputs {
+  border-radius: 20px;
+  border: 3px solid #e5e5e5;
+}
+.contact .text p {
+  line-height: 2;
+}
+
+.news {
+  padding-top: 80px;
+}
+@media print, screen and (min-width: 768px) {
+  .news .inner {
+    display: flex;
+    justify-content: center;
+    margin-right: 40px;
+    margin-left: 40px;
+  }
+  .news .inner .sub {
+    text-align: left;
+    font-size: 14px;
+  }
+}
+.news .news-cont {
+  margin-right: 30px;
+  margin-left: 30px;
+}
+.news .news-list .row {
+  display: flex;
+  align-items: center;
+}
+.news .news-list .row + .row {
+  margin-top: 16px;
+}
+.news .news-list a:hover {
+  text-decoration: underline;
+}
+.news .news-list dd.category {
+  font-weight: bold;
+  border-radius: 20px;
+  color: #333333;
+  font-size: 14px;
+  background-color: #e8e8e8;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 24px;
+  margin-left: 24px;
+  width: 100px;
+}
+.news .news-list dd.news-desc {
+  flex: 1;
+}
+.news .news-list dd.news-desc a {
+  width: 40px;
+  font-size: 14px;
+}
+@media print, screen and (min-width: 768px) {
+  .news .news-list dd.news-desc a {
+    font-size: 18px;
+  }
+}
+.news .news-link {
+  color: #000;
+  padding-top: 40px;
+}
+@media print, screen and (min-width: 768px) {
+  .news .news-link {
+    padding-top: 50px;
+  }
+}
+.news .news-link a {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.works {
+  margin-top: 160px;
+  margin-right: 80px;
+  margin-left: 80px;
+  padding-bottom: 160px;
+  background-color: #f0f0f0;
+}
+@media print, screen and (max-width: 896px) {
+  .works {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+.works .works-link {
+  padding-top: 56px;
+}
+.works .works-link a {
+  width: 200px;
+  color: white;
+  background: linear-gradient(-135deg, #7331a1, #250c65);
+}
+.works p.desc {
+  text-align: center;
+}
+.works .works-item {
+  width: 80%;
+  display: flex;
+}
+@media print, screen and (max-width: 896px) {
+  .works .works-item {
+    display: block;
+  }
+}
+.works .works-item .image .text {
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 0;
+}
+.works .works-item .image .sub {
+  padding-left: 58px;
+}
+.works .works-item .image p.desc {
+  flex: 1;
+}
+
+.about {
+  margin-top: 80px;
+  background-image: url(../img/colorfull.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 600px;
+}
+@media print, screen and (max-width: 896px) {
+  .about {
+    margin-top: 0;
+  }
+}
+.about .about-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about .title {
+  display: flex;
+  justify-content: center;
+}
+.about p.desc {
+  text-align: center;
+}
